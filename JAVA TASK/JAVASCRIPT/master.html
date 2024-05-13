@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Processor</title>
+</head>
+<body>
+    <h1>Credit Card Processor</h1>
+    <select id="cardType" onchange="processCardType()">
+        <option value="">Select Card Type</option>
+        <option value="visa">Visa</option>
+        <option value="mastercard">Mastercard</option>
+        <option value="rupay">RuPay</option>
+    </select>
+    <p id="output"></p>
+
+    <script>
+        function processCardType() {
+            var cardType = document.getElementById('cardType').value;
+           
+
+            switch (cardType) {
+                case 'visa':
+                    message = "123";
+                    break;
+                case 'mastercard':
+                    message = "456";
+                    break;
+                case 'rupay':
+                    message = "789";
+                    break;
+                default:
+                    message = "Please select a valid card type.";
+            }
+
+            document.getElementById('output').innerText = message;
+        }
+    </script>
+</body>
+</html>

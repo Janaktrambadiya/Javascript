@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #one{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="one">hello</h1>
+    <button onclick="change()">changeee</button>
+    <button onclick="reset()">reset</button>
+</body>
+<script>
+    function reset(){
+        document.getElementById("one").innerHTML="bye"
+        document.getElementById("one").style.color="aqua"
+    }
+
+   
+</script>
+</html>

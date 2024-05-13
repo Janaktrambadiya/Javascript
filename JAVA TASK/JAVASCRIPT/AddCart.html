@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+    <button onclick="increment()">+</button>
+    <h2 id="one"></h2>
+    <button onclick="decrement()">-</button>
+    <h3 id="two">Total Price :</h3>
+    </div>
+</body>
+<script>
+    let val=0;
+    document.getElementById("one").textContent = val;
+    function increment() {
+        val = val + 1;
+        document.getElementById("one").innerText = val;
+        document.getElementById("two").innerHTML = val*50
+    }
+    function decrement(){
+        if (val > 0) {
+            val = val - 1;
+        }
+        document.getElementById("one").innerText = val;
+        document.getElementById("two").textContent = val*50;
+    }
+</script>
+</html>

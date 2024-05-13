@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Square Slider Example</title>
+<style>
+    /* CSS for slider container */
+    .slider-container {
+        width: 200px;
+        margin: auto;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    /* CSS for slider */
+    input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 20px;
+        background: #d3d3d3;
+        outline: none;
+        border-radius: 10px;
+        margin: 20px 0;
+        position: relative;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 30px;
+        height: 30px;
+        background: #4CAF50;
+        cursor: pointer;
+        border-radius: 50%;
+        position: relative;
+        top: -5px;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        width: 30px;
+        height: 30px;
+        background: #4CAF50;
+        cursor: pointer;
+        border-radius: 50%;
+        position: relative;
+        top: -5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="slider-container">
+    <!-- Slider input -->
+    <input type="range" min="0" max="100" value="50" id="slider">
+    <!-- Display value -->
+    <p id="sliderValue">50</p>
+</div>
+
+<script>
+    // Get slider element
+    var slider = document.getElementById("slider");
+    // Get value display element
+    var sliderValue = document.getElementById("sliderValue");
+    
+    // Update the current slider value (each time you drag the slider handle)
+    slider.addEventListener("input", function() {
+        sliderValue.textContent = this.value;
+    });
+</script>
+
+</body>
+</html>

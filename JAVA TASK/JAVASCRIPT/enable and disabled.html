@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" id="num1" />
+<input type="number" id="num2" />
+<button onclick="multiply()" id="mul">Multiply</button>
+<p id="result"></p>
+<br><br>
+    <!-- <button id="main" onclick="res()">Main</button> -->
+    <!-- <br><br> -->
+    <button id="enable" onclick="enable()">Enable</button>
+    <button id="disable" onclick="disable()">Disable</button>
+</body>
+<script>
+    // var mainbt = document.getElementById('main');
+    var m = document.getElementById('mul');
+    var n1 = document.getElementById('num1');
+    var n2 = document.getElementById('num2');
+
+    function enable(){
+        n1.disabled='';
+        n2.disabled='';
+        m.disabled='';
+    }
+    function multiply() {
+    var num1 = document.getElementById("num1").value;
+     var num2 = document.getElementById("num2").value;
+     var result = document.getElementById("result");
+        result.innerHTML = "Result: " + (num1 * num2);
+        result.style.display="block";
+    }
+
+    function disable() {
+     
+        n1.disabled='true';
+        n2.disabled='true';
+        m.disabled='true';
+     var result = document.getElementById("result");
+     result.style.display="none";
+    }
+</script>
+</html>

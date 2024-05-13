@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="one"></h1>
+</body>
+<script>
+    const person = {
+ name:"Janak",
+ age:21,
+Firstname:"Trambadiya",
+grade:"B+"
+    }
+    //document.getElementById('one').innerHTML=person.name;
+    let xyz ="";
+    for(let p in person){
+        xyz = person[p] + "<br>"
+    }
+    document.getElementById("one").innerHTML= JSON.stringify
+    (person);
+</script>
+</html>
